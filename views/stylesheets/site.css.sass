@@ -1,0 +1,207 @@
+@import compass.sass
+@import blueprint.sass
+
+!font_color         = #2a2a2a
+!link_color         = #0388a6
+!link_hover_color   = #009ce0
+!link_focus_color   = !link_color
+!link_active_color  = !link_color
+!link_visited_color = !link_color
+
+!blueprint_font_family  = "'Century Gothic', 'Apple Gothic', 'Helvetica Neue', arial, sans-serif"
+!blueprint_font_size    = 13px
+
+!blueprint_grid_columns = 12
+!blueprint_grid_width   = 60px
+!blueprint_grid_margin  = 20px
+
++global-reset
++blueprint-typography
+
+!radius = 10px
+=rounded
+	border-radius = !radius
+	-moz-border-radius = !radius
+	-webkit-border-radius = !radius
+
+=clearfix
+	:overflow auto
+	:overflow -moz-scrollbars-none
+	:display inline-block
+	&
+		:display block
+
+a
+	+link-colors(!link_color, !link_hover_color, !link_focus_color, !link_active_color, !link_visited_color)
+	text-decoration: none
+	text-shadow: 0 1px 0 #FFF
+
+h1, h2, h3, h4, h5, h6
+	text-shador: 0 1px 0 #FFF
+
+body
+	background= #EEE
+
+#frame
+	padding: 50px
+	text-align: center
+	+container
+	width: 650px
+	#header
+		+float-left
+	#nav
+		+float-right
+		+horizontal-list
+		a
+			padding: 3px 10px
+			font-size: 16px
+			+rounded
+			&:hover
+				background-color: #E0E0E0
+	#leader
+		clear: both
+		text-align: left
+		border-bottom: 1px solid #555
+		padding-left: 20px
+		h3
+			font-size: 22px
+	#availability
+		min-height: 1px
+		padding: 4px
+		&.red
+			background-color: pink
+		&.yellow
+			background-color: yellow
+		&.green
+			background-color: light-green
+	#footer
+		font-size: 14px
+		border-top: 1px solid #FFF
+		padding: 2px 6px
+		font-size: 13px
+		ul
+			+horizontal-list
+			+float-left
+			a
+				padding: 0 10px
+		.copy
+			+float-right
+
+#frame
+	a.top
+		font-size: 11px
+		+float-right
+	.box
+		+clearfix
+		min-height: 200px
+		border-top: 1px solid #FFF
+		border-bottom: 1px solid #555
+		p
+			text-align: justify
+			font-size: 16px
+		h4
+			text-align: left
+			padding: 4px 8px
+			font-size: 24px
+		.title
+			font-size: 24px
+			text-align: right
+			padding-right: 10px
+			position: relative
+			right: 79px
+			top: 79px
+			+float-left
+			width: 190px
+			height: 40px
+			-webkit-transform: rotate(-90deg)
+			background: #DDD
+
+#projects
+	text-align: center
+	ul.switcher
+		+horizontal-list
+	.wrapper
+		overflow: hidden
+		position: relative
+		height: 200px
+		width: 640px
+		margin: 0 auto 10px
+		.previews
+			position: absolute
+			border: 1px solid #DDD
+			width: 1000em
+			height: 200px
+			.project
+				float: left
+				width: 640px
+				height: 200px
+				img
+					float: left
+					margin: 30px 20px
+				h1
+					float: left
+					font-size: 28px
+					margin-top: 20px
+				p
+					float: left
+					width: 380px
+					font-size: 14px
+	.switcher
+		+float-right
+		font-size: 28px
+		line-height: 26px
+
+#blog
+	height: 25px !important
+	background-color: #DDD
+	min-height: 25px !important
+	font-size: 15px
+
+#feedback
+	p.quotation
+		margin: 10px
+		font-size: 16px
+		span
+			font-style: italic
+			font-size: 13px
+			margin-left: 15px
+
+#about
+	img
+		+float-left
+		margin: 0 10px
+		border: 1px solid #EEE
+		+rounded
+
+#services
+	ul.skills
+		+no-bullets
+		width: 600px
+		float: left
+		font-size: 16px
+		-webkit-column-count: 2
+		-webkit-column-gap: 10
+		-moz-column-count: 2
+		-moz-column-gap: 10
+		text-align: left
+		li
+			padding-left: 10px
+			&.header
+				font-weight: bold
+				padding-left: 0
+
+#contact
+	form
+		text-align: left
+		line-height: 29px
+		padding-bottom: 20px
+		textarea
+			margin: 8px 0
+			width: 100%
+			height: 60px
+
+#TFLN
+	background-color: #FFF
+
+#NBS
+	background-color: #FFF
