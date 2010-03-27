@@ -8,16 +8,18 @@ $(document).ready(function(){
 		var wid = $('#projects .wrapper').width();
 		var lft = -1 * ( ind * wid + 1 );
 		var cnt = $('.previews > div').length;
-		$('#projects .previews').animate( {left:lft}, 800, 'swing' );
 		$('#projects').data( 'index', ind );
-		$('ul.switcher a').removeClass( 'curr' );
-		$( $('ul.switcher a')[ ind ] ).addClass( 'curr' );
-		if ( ind == 0 )
-			$('div.switcher a.prev').css('visibility','hidden');
-		else $('div.switcher a.prev').css('visibility','');
-		if ( ind == cnt-1 )
-			$('div.switcher a.next').css('visibility','hidden');
-		else $('div.switcher a.next').css('visibility','');
+		$('#projects .previews').animate( {left:lft}, 800, 'swing', function(){
+			var ind = $('#projects').data( 'index' );
+			$('ul.switcher a').removeClass( 'curr' );
+			$( $('ul.switcher a')[ ind ] ).addClass( 'curr' );
+			if ( ind == 0 )
+				$('div.switcher a.prev').css('visibility','hidden');
+			else $('div.switcher a.prev').css('visibility','');
+			if ( ind == cnt-1 )
+				$('div.switcher a.next').css('visibility','hidden');
+			else $('div.switcher a.next').css('visibility','');
+		} );
 	}
 
 	// Portfolio Switcher 
