@@ -221,7 +221,7 @@ a {
     color: #0388a6; }
 
 h1, h2, h3, h4, h5, h6 {
-  text-shador: 0 1px 0 #FFF; }
+  text-shadow: 0 1px 0 #FFF; }
 
 body {
   background: #eeeeee; }
@@ -398,11 +398,13 @@ body {
         height: 200px; }
         #projects .wrapper .previews .project img {
           float: left;
-          margin: 30px 20px; }
-        #projects .wrapper .previews .project h1 {
+          margin: 30px 20px;
+          border: 1px solid #222;
+          padding: 1px; }
+        #projects .wrapper .previews .project h2 {
           float: left;
           font-size: 28px;
-          margin-top: 20px; }
+          margin: 10px 0 0 0; }
         #projects .wrapper .previews .project p {
           float: left;
           width: 380px;
