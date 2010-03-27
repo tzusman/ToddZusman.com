@@ -39,6 +39,19 @@ $(document).ready(function(){
 		return false;
 	} );
 
+	$(document).keypress( function(e){
+		if ( e.keyCode == 37 ) {
+			var ind = $('#projects').data('index');
+			if ( ind == 0 ) return;
+			switch_it( ind-1 );
+		} else if ( e.keyCode == 39 ) {
+			var ind = $('#projects').data('index');
+			var cnt = $('.previews > div').length;
+			if ( ind == cnt-1 ) return;
+			switch_it( ind+1 );	
+		}
+	} );
+	
 	// Scroll to Info
 	$.localScroll( {filter:'[class!=ignore]'} );
 
