@@ -5,7 +5,6 @@ $(document).ready(function(){
 	$( $('ul.switcher a')[0] ).addClass( 'curr' );
 
 	var switch_it = function ( ind ) {
-		console.log( "Index: " + ind );
 		var wid = $('#projects .wrapper').width();
 		var lft = -1 * ( ind * wid + 1 );
 		var cnt = $('.previews > div').length;
