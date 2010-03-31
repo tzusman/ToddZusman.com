@@ -39,7 +39,9 @@ $(document).ready(function(){
 		return false;
 	} );
 
+	/*
 	$(document).keypress( function(e){
+		console.log( e );
 		if ( e.keyCode == 37 ) {
 			var ind = $('#projects').data('index');
 			if ( ind == 0 ) return;
@@ -51,6 +53,21 @@ $(document).ready(function(){
 			switch_it( ind+1 );	
 		}
 	} );
+	*/
+
+	/*
+	$('#projects').scrollable( {
+		easing: 'swing',
+		size: '1',
+		items: '.previews',
+		loop: 'true',
+		next: '.next',
+		navi: '.prev',
+		naviItem: 'a',
+		keyboard: true,			
+		speed: '800'
+	} );
+	*/
 	
 	// Scroll to Info
 	$.localScroll( {filter:'[class!=ignore]'} );

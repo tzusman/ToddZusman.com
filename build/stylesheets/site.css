@@ -249,7 +249,8 @@ body {
     outline: 0;
     overflow: auto;
     overflow: -moz-scrollbars-none;
-    display: inline-block; }
+    display: inline-block;
+    overflow: hidden; }
     #frame #nav {
       display: block; }
     #frame #nav li {
@@ -366,7 +367,8 @@ body {
     outline: 0;
     overflow: auto;
     overflow: -moz-scrollbars-none;
-    display: inline-block; }
+    display: inline-block;
+    overflow: hidden; }
     #projects ul.switcher {
       display: block; }
     #projects ul.switcher li {
