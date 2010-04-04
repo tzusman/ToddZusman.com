@@ -112,15 +112,15 @@ p {
 
 a {
   text-decoration: underline;
-  color: #0388a6; }
+  color: white; }
   a:visited {
-    color: #0388a6; }
+    color: white; }
   a:focus {
-    color: #0388a6; }
+    color: white; }
   a:hover {
     color: #009ce0; }
   a:active {
-    color: #0388a6; }
+    color: white; }
 
 blockquote {
   margin: 1.5em;
@@ -208,16 +208,16 @@ caption {
   color: #111111; }
 
 a {
-  color: #0388a6;
+  color: white;
   text-decoration: none; }
   a:visited {
-    color: #0388a6; }
+    color: white; }
   a:focus {
-    color: #0388a6; }
+    color: white; }
   a:hover {
     color: #009ce0; }
   a:active {
-    color: #0388a6; }
+    color: white; }
 
 body {
   background: #111; }
@@ -286,11 +286,10 @@ h1 {
     display: inline;
     float: left; }
     #about #main h3 {
-      display: inline;
-      float: left;
       color: #FFF;
       font-weight: bold;
-      font-size: 30px; }
+      font-size: 30px;
+      margin-bottom: 15px; }
     #about #main p {
       color: #999;
       text-align: justify; }
@@ -305,7 +304,7 @@ h1 {
       margin-bottom: 5px; }
     #about #skills ul {
       padding: 0;
-      font-size: 13px; }
+      font-size: 15px; }
       #about #skills ul li {
         list-style-type: none;
         margin-left: 0px; }
@@ -368,7 +367,6 @@ h1 {
         display: inline;
         float: left; }
         #projects .previews .about .see a {
-          color: #FFF;
           text-decoration: underline;
           font-size: 15px; }
 
