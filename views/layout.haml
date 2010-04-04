@@ -85,8 +85,12 @@
 				%h4 Let's work together
 				%p Because of the nature of the projects I work on, I am very selective about my clients. Developing a web application is an intense and lengthy process. To achieve a fantastic result, the client must be willing to do their homework in order to clearly express their vision. Even the simplest projects require hours of wireframing and strategy to determine how the application will work. This entire process is highly collaborative, because no one knows better what you are looking for in a product than you. If you are interested in learning more about my process, <a href="#">contact me</a>, I'd be happy to explain further.
 			%form{:action=>'send.php',:method=>'post'}
-				%input{:type=>'text',:name=>'name'}
-				%input{:type=>'text',:name=>'email'}
-				%textarea{:rows=>10,:cols=>50,:name=>'about'}
-				%input{:type=>'submit',:val=>'Send'}
+				%p
+					%input{:type=>'text',:name=>'name'}
+				%p
+					%input{:type=>'text',:name=>'email'}
+				%p
+					%textarea{:rows=>10,:cols=>50,:name=>'about'}
+				.submit
+					%input{:type=>'submit',:value=>'Send'}
 
