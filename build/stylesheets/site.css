@@ -371,3 +371,62 @@ h1 {
           color: #FFF;
           text-decoration: underline;
           font-size: 15px; }
+
+#contact {
+  padding-bottom: 100px;
+  overflow: auto;
+  overflow: -moz-scrollbars-none;
+  display: inline-block; }
+  #contact {
+    display: block; }
+  #contact .wrapper {
+    margin-top: 30px; }
+    #contact .wrapper .work {
+      background-color: #171717;
+      padding: 20px;
+      width: 320px;
+      display: inline;
+      float: left; }
+      #contact .wrapper .work h4 {
+        color: #FFF;
+        text-align: left;
+        font-weight: bold;
+        font-size: 30px;
+        margin-bottom: 10px; }
+      #contact .wrapper .work p {
+        color: #999;
+        text-align: justify; }
+    #contact .wrapper form {
+      display: inline;
+      float: left;
+      width: 400px;
+      margin-left: 5px;
+      padding: 20px;
+      background: #1C1C1C; }
+      #contact .wrapper form p {
+        position: relative; }
+        #contact .wrapper form p input, #contact .wrapper form p textarea {
+          border: none;
+          background: #2C2C2C;
+          color: #FFF;
+          font-size: 12px; }
+        #contact .wrapper form p input {
+          padding: 13px 10px 10px 90px; }
+        #contact .wrapper form p textarea {
+          padding: 60px 20px 10px 10px; }
+        #contact .wrapper form p span {
+          position: absolute;
+          left: 10px;
+          top: 0px;
+          padding-top: 10px;
+          color: #FFF; }
+          #contact .wrapper form p span.alt {
+            top: 20px;
+            color: #999; }
+      #contact .wrapper form .submit input {
+        padding: 10px 20px;
+        font-weight: bold;
+        font-size: 24px;
+        background: #2C2C2C;
+        color: #FFF;
+        border: none; }

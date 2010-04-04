@@ -100,24 +100,30 @@
     </div>
     <div id='contact'>
       <h1>Contact Me</h1>
-      <div class='work'>
-        <h4>Let's work together</h4>
-        <p>Because of the nature of the projects I work on, I am very selective about my clients. Developing a web application is an intense and lengthy process. To achieve a fantastic result, the client must be willing to do their homework in order to clearly express their vision. Even the simplest projects require hours of wireframing and strategy to determine how the application will work. This entire process is highly collaborative, because no one knows better what you are looking for in a product than you. If you are interested in learning more about my process, <a href="#">contact me</a>, I'd be happy to explain further.</p>
-      </div>
-      <form action='send.php' method='post'>
-        <p>
-          <input name='name' type='text' />
-        </p>
-        <p>
-          <input name='email' type='text' />
-        </p>
-        <p>
-          <textarea cols='50' name='about' rows='10'></textarea>
-        </p>
-        <div class='submit'>
-          <input type='submit' value='Send' />
+      <div class='wrapper'>
+        <div class='work'>
+          <h4>Let's work together</h4>
+          <p>Because of the nature of the projects I work on, I am very selective about my clients. Developing a web application is an intense and lengthy process. To achieve a fantastic result, the client must be willing to do their homework in order to clearly express their vision. Even the simplest projects require hours of wireframing and strategy to determine how the application will work. This entire process is highly collaborative, because no one knows better what you are looking for in a product than you. If you are interested in learning more about my process, <a href="#">contact me</a>, I'd be happy to explain further.</p>
         </div>
-      </form>
+        <form action='send.php' method='post'>
+          <p>
+            <input autocomplete='off' name='name' type='text' />
+            <span>Your Name</span>
+          </p>
+          <p>
+            <input autocomplete='off' name='email' type='text' />
+            <span>Your Email</span>
+          </p>
+          <p>
+            <textarea cols='48' name='about' rows='8'></textarea>
+            <span>Tell me about the project</span>
+            <span class='alt'>Budget, Timeline, Consulting or Development? etc.</span>
+          </p>
+          <div class='submit'>
+            <input type='submit' value='Send' />
+          </div>
+        </form>
+      </div>
     </div>
   </body>
 </html>
