@@ -233,7 +233,7 @@ h1 {
 .wrapper {
   width: 920px;
   margin: 0 auto;
-  padding-left: 200px; }
+  padding-left: 150px; }
 
 #nav {
   background: #1b1b1b;
@@ -315,7 +315,8 @@ h1 {
           font-size: 11px; }
 
 #projects {
-  text-align: center; }
+  text-align: center;
+  margin: 30px 0 0 0; }
   #projects ul {
     list-style-type: none;
     margin: 0px;
@@ -337,3 +338,36 @@ h1 {
           color: #333; }
           #projects ul li.bull a.curr {
             color: #D4D4D4; }
+  #projects .previews {
+    background-color: #1B1B1B;
+    overflow: auto;
+    overflow: -moz-scrollbars-none;
+    display: inline-block; }
+    #projects .previews {
+      display: block; }
+    #projects .previews .preview {
+      padding: 20px 20px 20px 0;
+      display: inline;
+      float: left; }
+    #projects .previews .about {
+      display: inline;
+      float: left;
+      width: 220px;
+      padding: 20px 20px 112px 20px;
+      border-left: 5px solid #111; }
+      #projects .previews .about h4 {
+        color: #FFF;
+        text-align: left;
+        font-weight: bold;
+        font-size: 30px;
+        margin-bottom: 20px; }
+      #projects .previews .about p {
+        color: #999;
+        text-align: left; }
+      #projects .previews .about .see {
+        display: inline;
+        float: left; }
+        #projects .previews .about .see a {
+          color: #FFF;
+          text-decoration: underline;
+          font-size: 15px; }
