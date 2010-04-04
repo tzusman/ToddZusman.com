@@ -13,125 +13,80 @@
 		= javascript_include_tag 'site.js'
 		= yield_content :head
 
-	%body{ :class => page_classes }
-		%div
-			%a{:name=>'top'}
-		#frame
-			%ul#nav
-				%li.selected= link_to 'Projects', '#projects'
-				%li= link_to 'About', '#about'
-				%li= link_to 'Services', '#services'
-				%li= link_to 'Contact', '#contact'
-			#header
-				%h1 Todd Zusman
-			#leader
-				%h2 Hi. I develop web applications.
+	%body
+		#nav
+			%ul
+				%li=link_to "Projects", "#"
+				%li +
+				%li=link_to "About", "#"
+				%li +
+				%li=link_to "Contact", "#"
 
-			#blog.box
-				%a{:href=>'#'}
-					Check out some articles I have written about Web Development &raquo;
+		#header
+			%h1 Todd Zusman,
+			%h2 Web Application Developer
 
-			#projects.box
-				= link_to 'top', '#top', :class=>'top'
-				%h4 What have you been working on?
-				.wrapper
-					.previews
-						#TFLN.project
-							%a.img{:href=>'/images/TFLN.png'}
-								%img{:src=>'/images/TFLN.png',:width=>200,:alt=>'TextsFromLastNight.com'}
-							%h2
-								%a{:href=>"http://textsfromlastnight.com"}
-									TextsFromLastNight.com
-							%p
-								I built the platform which is supportng TFLN's exploading popularity.  Scalability was crucial, as the system serves 5+ million web and mobile requests per day. I wore many hats building the platform, from server admin to front-end developer. Designed and built the API which TFLN's iPhone, iPad, and Android apps use.
-						#NBS.project
-							%a.img{:href=>'/images/NBS.png'}
-								%img{:src=>'/images/NBS.png',:width=>200,:alt=>'NextBigSound.com'}
-							%h2
-								%a{:href=>"http://nextbigsound.com"}
-									NextBigSound.com
-							%p
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-						#Symplex.project
-							%a.img{:href=>'/images/Symplex.png'}
-								%img{:src=>'/images/Symplex.png',:width=>200,:alt=>'Symplex'}
-							%h2
-								%a
-									Symplex Admin Panel
-							%p
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-				.switcher
-					%div
-						%a.prev{:href=>"#"}
-							&laquo; Previous
-					%div
-						%a.next{:href=>"#"}
-							Next &raquo;
-				%ul.switcher
-					%li= link_to '&bull;', '#', {:class=>'ignore'}
-					%li= link_to '&bull;', '#', {:class=>'ignore'}
-					%li= link_to '&bull;', '#', {:class=>'ignore'}
-
-			#feedback.box
-				%p.quotation
-					"Todd developed and supported our entire mobile backend infrastructure from API programming to server administration. He is a master of his art and a true perfectionist. If everyone was as good at what they did as Todd, we'd all be wearing jetpacks and having sex with robots".
-					%span ~ Mark Frenkel, Chief Mobile Developer, TFLN
-			#about.box
-				= link_to 'top', '#top', :class=>'top'
-				%h4 Who are you?
-				%img{:src=>'/images/todd.jpg',:style=>'width: 120px',:alt=>'Todd Zusman'}
-				%p I'm a recent graduate of the University of Michigan's College of Engineering. I have been developing web applications for over 8 years. Through my various experiences in web technologies, I have learned to build web applications from the ground up.  I have a solid understanding of everything it takes to build a great app, from server administration to user experience. I'm currently based in Boulder, CO where I enjoy snowboarding and hiking.
-
-			#services.box
-				= link_to 'top', '#top', :class=>'top'
-				%h4 So what exactly do you do?
-				%p People come up with a great idea and ask themselves, "How do I make this happen?". The answer? Contact me. I take ideas and turn them into useful and engaging web applications. I come fully-packed with all the skills &amp; experience needed to get the job done. No one wants to be stuck thinking "that was my idea&hellip;"
-				%ul.skills
-					%li.header Technologies
-					%li PHP
-					%li MySQL
-					%li Javascript
-					%li XML
-					%li Nginx &amp; Apache
-					%li HTML &amp; CSS (HAML/SASS)
-					%li.header Skills
-					%li Database Design
-					%li Hosting &amp; Scalability
-					%li Security Mitigation
-					%li Server Administration
-					%li Analytics (Custom &amp; 3rd Party)
-					%li	Frameworks (jQuery, CakePHP)
-				%p Please note that I am not a web or graphic designer.  I know several however, so if you need a design as well, I'll be able to help you out.
-			#together.box
-				= link_to 'top', '#top', :class=>'top'
-				%h4 Would we work well together?
-				%p Because of the nature of the projects I work on, I am very selective about my clients. Developing a web application is an intense and  lengthy process. To achieve a fantastic result, the client must be willing to do their homework in order to clearly express their vision. Even the simplest projects require hours of wireframing and strategy to determine how the application will work. This entire process is highly collaborative, because no one knows better what you are looking for in a product than you. If you are interested in learning more about my process, <a href="#contact">contact me</a>, I'd be happy to explain further.
-
-
-			#availability.box.red
-				%b Sorry, I am not currently taking on new projects
-				%br
-				However, I have some time to consult
-
-			#contact.box
-				= link_to 'top', '#top', :class=>'top'
-				%h4 How do I get in contact?
-				%p Can't waste your time with silly forms? Give me a call at (857) 205 - 8320
-				%form{:action=>'/contact'}
+		#about
+			.wrapper
+				.pic
+					%img{:src=>'/images/todd.jpg',:alt=>'Todd Zusman, Web Application Developer',:width=>136}
+				#main
+					%h3
+						I'm pretty damn awesome or whatever.
 					%p
-						Hi, I'm <input type="text" name="name" />.  I'm looking to have some <select><option></option><option>development</option><option>consulting</option></select> done for a project I'm involved with.  We are looking to <select><option></option><option>create a new</option><option>upgrade our existing</option></select> application and could use your help.  Our total budget is approximately <select><option></option><option>$3,000-$5,000</option><option>$5,000-$10,000</option><option>$10,000-$15,0000</option><option>$15,000-$25,000</option><option>$25,000-$50,000</option><option>$50,000+</option></select>.  We are looking to start working on this project <select><option></option><option>immediately</option><option>in the near future</option><option>in a month or two</option><option>at some point</option></select>. Here are some details about the project:
-					%div
-						%textarea{:name=>'details',:rows=>4,:cols=>50}
+						I'm a recent graduate of the University of Michigan's College of Engineering. I have been developing web applications for over 8 years. Through my various experiences in web technologies, I have learned to build web applications from the ground up. I have a solid understanding of everything it takes to build a great app, from server administration to user experience. I'm currently based in Boulder, CO where I enjoy snowboarding and hiking.
 					%p
-						Contact me at <input type="text" name="contact" /> when you next get a chance.
-					%div
-						%input{:type=>'submit',:value=>'Send to Todd'}
-	
-			#footer
-				%ul
-					%li= link_to 'Projects', '#projects'
-					%li= link_to 'About', '#about'
-					%li= link_to 'Services', '#services'
-					%li= link_to 'Blog', '#'
-				%div.copy
-					&copy; 2010 S. Todd Zusman
+						People come up with a great idea and ask themselves, &quot;How do I make this happen?&quot; The answer? Contact me. I take ideas and turn them into useful and engaging web applications. I come fully-packed with all the skills &amp; experience needed to get the job done. No one wants to be stuck thinking &quot;that was my idea&hellip;&quot;
+				#skills
+					%h4 Technologies
+					%ul
+						%li PHP
+						%li MySQL
+						%li Javascript
+						%li XML
+						%li Nginx &amp; Apache
+						%li
+							HTML &amp; CSS
+							%span (HAML/SASS)
+					%h4 Skills
+					%ul
+						%li Database Design
+						%li Hosting &amp; Scalability
+						%li Security Hardening
+						%li Server Administration
+						%li
+							Analytics
+							%span (Custom &amp; 3<sup>rd</sup> Party)
+						%li
+							Frameworks
+							%span (jQuery, CakePHP, etc)
+
+		#projects
+			%h1 Recent Projects
+			%ul
+				%li=link_to "&laquo; Prev"
+				%li.bull=link_to "&bull;", "#", :class=>'curr'
+				%li.bull=link_to "&bull;", "#" 
+				%li.bull=link_to "&bull;", "#"
+				%li=link_to " Next &raquo;"
+			.wrapper
+				.previews
+					.preview
+						%img{:src=>'TFLN.png',:alt=>'TextsFromLastNight.com'}
+					.about
+						%h4 Texts From Last Night
+						%p I built the platform which is supportng TFLN's exploading popularity. Scalability was crucial, as the system serves 5+ million web and mobile requests per day. I wore many hats building the platform, from server admin to front-end developer. Designed and built the API which TFLN's iPhone, iPad, and Android apps use.
+						.see
+							=link_to "Visit Site &rarr;", "#"
+
+		#contact
+			%h1 Contact Me
+			.work
+				%h4 Let's work together
+				%p Because of the nature of the projects I work on, I am very selective about my clients. Developing a web application is an intense and lengthy process. To achieve a fantastic result, the client must be willing to do their homework in order to clearly express their vision. Even the simplest projects require hours of wireframing and strategy to determine how the application will work. This entire process is highly collaborative, because no one knows better what you are looking for in a product than you. If you are interested in learning more about my process, <a href="#">contact me</a>, I'd be happy to explain further.
+			%form{:action=>'send.php',:method=>'post'}
+				%input{:type=>'text',:name=>'name'}
+				%input{:type=>'text',:name=>'email'}
+				%textarea{:rows=>10,:cols=>50,:name=>'about'}
+				%input{:type=>'submit',:val=>'Send'}
+

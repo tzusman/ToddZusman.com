@@ -48,7 +48,7 @@ a img {
 
 body {
   line-height: 1.5;
-  font-family: 'Century Gothic', 'Apple Gothic', 'Helvetica Neue', arial, sans-serif;
+  font-family: 'Helvetica Neue', 'Helvetica', arial, sans-serif;
   color: #2a2a2a;
   font-size: 81.25%; }
 
@@ -209,8 +209,7 @@ caption {
 
 a {
   color: #0388a6;
-  text-decoration: none;
-  text-shadow: 0 1px 0 #FFF; }
+  text-decoration: none; }
   a:visited {
     color: #0388a6; }
   a:focus {
@@ -220,262 +219,121 @@ a {
   a:active {
     color: #0388a6; }
 
-h1, h2, h3, h4, h5, h6 {
-  text-shadow: 0 1px 0 #FFF; }
-
 body {
-  background: #eeeeee; }
+  background: #111; }
 
-#frame {
-  padding: 25px 50px;
+h1 {
   text-align: center;
-  width: 950px;
+  font-size: 80px;
+  font-weight: bold;
+  color: #D4D4D4;
+  margin: 40px 0 0 0;
+  letter-space: 2px; }
+
+.wrapper {
+  width: 920px;
   margin: 0 auto;
+  padding-left: 200px; }
+
+#nav {
+  background: #1b1b1b;
+  opacity: 0.95;
+  -moz-opacity: 0.95;
+  -khtml-opacity: 0.95;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=95);
+  filter: alpha(opacity=95);
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  text-transform: uppercase; }
+  #nav ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    display: inline; }
+    #nav ul li {
+      margin: 0px;
+      padding: 0px;
+      display: inline; }
+    #nav ul li {
+      color: #333; }
+      #nav ul li a {
+        color: #BDBDBD;
+        margin: 0 5px; }
+
+#header {
+  font-family: "Georgia, Cambria, 'Times New Roman', Times, serif";
+  text-align: center; }
+  #header h2 {
+    font-size: 35px;
+    color: #575757;
+    margin-top: -15px; }
+
+#about {
+  background: #171717;
   overflow: auto;
   overflow: -moz-scrollbars-none;
-  display: inline-block;
-  width: 650px; }
-  #frame {
+  display: inline-block; }
+  #about {
     display: block; }
-  #frame #header {
+  #about .pic {
+    padding-top: 20px;
     display: inline;
     float: left; }
-  #frame #nav {
+  #about #main {
+    width: 400px;
+    padding: 20px 20px 0 20px;
     display: inline;
-    float: right;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    overflow: auto;
-    overflow: -moz-scrollbars-none;
-    display: inline-block;
-    overflow: hidden; }
-    #frame #nav {
-      display: block; }
-    #frame #nav li {
-      list-style-type: none;
-      margin-left: 0px;
-      white-space: nowrap;
+    float: left; }
+    #about #main h3 {
       display: inline;
       float: left;
-      padding-left: 4px;
-      padding-right: 4px; }
-      #frame #nav li.first {
-        padding-left: 0px; }
-      #frame #nav li.last {
-        padding-right: 0px; }
-    #frame #nav a {
-      padding: 3px 10px;
-      font-size: 16px;
-      border-radius: 10px;
-      -moz-border-radius: 10px;
-      -webkit-border-radius: 10px; }
-      #frame #nav a:hover {
-        background-color: #E0E0E0; }
-  #frame #leader {
-    clear: both;
-    text-align: left;
-    border-bottom: 1px solid #555;
-    padding-left: 20px; }
-    #frame #leader h3 {
-      font-size: 22px; }
-  #frame #availability {
-    min-height: 1px;
-    padding: 4px; }
-    #frame #availability.red {
-      background-color: pink; }
-    #frame #availability.yellow {
-      background-color: yellow; }
-    #frame #availability.green {
-      background-color: light-green; }
-  #frame #footer {
-    font-size: 14px;
-    border-top: 1px solid #FFF;
-    padding: 2px 6px;
-    font-size: 13px; }
-    #frame #footer ul {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      outline: 0;
-      overflow: auto;
-      overflow: -moz-scrollbars-none;
-      display: inline-block;
-      display: inline;
-      float: left; }
-      #frame #footer ul {
-        display: block; }
-      #frame #footer ul li {
-        list-style-type: none;
-        margin-left: 0px;
-        white-space: nowrap;
-        display: inline;
-        float: left;
-        padding-left: 4px;
-        padding-right: 4px; }
-        #frame #footer ul li.first {
-          padding-left: 0px; }
-        #frame #footer ul li.last {
-          padding-right: 0px; }
-      #frame #footer ul a {
-        padding: 0 10px; }
-    #frame #footer .copy {
-      display: inline;
-      float: right; }
-
-#frame a.top {
-  font-size: 11px;
-  display: inline;
-  float: right; }
-#frame .box {
-  overflow: auto;
-  overflow: -moz-scrollbars-none;
-  display: inline-block;
-  min-height: 200px;
-  border-top: 1px solid #FFF;
-  border-bottom: 1px solid #555; }
-  #frame .box {
-    display: block; }
-  #frame .box p {
-    text-align: justify;
-    font-size: 16px; }
-  #frame .box h4 {
-    text-align: left;
-    padding: 4px 8px;
-    font-size: 24px; }
-  #frame .box .title {
-    font-size: 24px;
-    text-align: right;
-    padding-right: 10px;
-    position: relative;
-    right: 79px;
-    top: 79px;
+      color: #FFF;
+      font-weight: bold;
+      font-size: 30px; }
+    #about #main p {
+      color: #999;
+      text-align: justify; }
+  #about #skills {
+    border-left: 5px solid #111;
+    width: 220px;
+    padding: 20px 0 41px 20px;
     display: inline;
-    float: left;
-    width: 190px;
-    height: 40px;
-    -webkit-transform: rotate(-90deg);
-    background: #DDD; }
+    float: left; }
+    #about #skills h4 {
+      color: #FFF;
+      margin-bottom: 5px; }
+    #about #skills ul {
+      padding: 0;
+      font-size: 13px; }
+      #about #skills ul li {
+        list-style-type: none;
+        margin-left: 0px; }
+      #about #skills ul li {
+        color: #999; }
+        #about #skills ul li span {
+          font-size: 11px; }
 
 #projects {
   text-align: center; }
-  #projects ul.switcher {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    overflow: auto;
-    overflow: -moz-scrollbars-none;
-    display: inline-block;
-    overflow: hidden; }
-    #projects ul.switcher {
-      display: block; }
-    #projects ul.switcher li {
-      list-style-type: none;
-      margin-left: 0px;
-      white-space: nowrap;
-      display: inline;
-      float: left;
-      padding-left: 4px;
-      padding-right: 4px; }
-      #projects ul.switcher li.first {
-        padding-left: 0px; }
-      #projects ul.switcher li.last {
-        padding-right: 0px; }
-  #projects .wrapper {
-    overflow: hidden;
-    position: relative;
-    height: 200px;
-    width: 640px;
-    margin: 0 auto 10px; }
-    #projects .wrapper .previews {
-      position: absolute;
-      border: 1px solid #DDD;
-      width: 1000em;
-      height: 200px; }
-      #projects .wrapper .previews .project {
-        background-color: #FFF;
-        float: left;
-        width: 640px;
-        height: 200px; }
-        #projects .wrapper .previews .project img {
-          float: left;
-          margin: 30px 20px;
-          border: 1px solid #222;
-          padding: 1px; }
-        #projects .wrapper .previews .project h2 {
-          float: left;
-          font-size: 28px;
-          margin: 10px 0 0 0; }
-        #projects .wrapper .previews .project p {
-          float: left;
-          width: 380px;
-          font-size: 14px; }
-  #projects div.switcher {
-    float: left;
-    font-size: 12px;
-    margin-left: 10px; }
-    #projects div.switcher div {
-      width: 70px;
-      float: left; }
-      #projects div.switcher div a {
-        margin: 0 8px;
-        font-weight: bold; }
-  #projects ul.switcher {
-    display: inline;
-    float: right;
-    font-size: 28px;
-    line-height: 26px; }
-    #projects ul.switcher a.curr {
-      color: #000; }
-
-#blog {
-  height: 25px !important;
-  background-color: #DDD;
-  min-height: 25px !important;
-  font-size: 15px; }
-
-#feedback p.quotation {
-  margin: 10px;
-  font-size: 16px; }
-  #feedback p.quotation span {
-    font-style: italic;
-    font-size: 13px;
-    margin-left: 15px; }
-
-#about img {
-  display: inline;
-  float: left;
-  margin: 0 10px;
-  border: 1px solid #EEE;
-  border-radius: 10px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px; }
-
-#services ul.skills {
-  width: 600px;
-  float: left;
-  font-size: 16px;
-  -webkit-column-count: 2;
-  -webkit-column-gap: 10;
-  -moz-column-count: 2;
-  -moz-column-gap: 10;
-  text-align: left; }
-  #services ul.skills li {
+  #projects ul {
     list-style-type: none;
-    margin-left: 0px; }
-  #services ul.skills li {
-    padding-left: 10px; }
-    #services ul.skills li.header {
-      font-weight: bold;
-      padding-left: 0; }
-
-#contact form {
-  text-align: left;
-  line-height: 29px;
-  padding-bottom: 20px; }
-  #contact form textarea {
-    margin: 8px 0;
-    width: 100%;
-    height: 60px; }
+    margin: 0px;
+    padding: 0px;
+    display: inline; }
+    #projects ul li {
+      margin: 0px;
+      padding: 0px;
+      display: inline; }
+    #projects ul li {
+      margin: 0 15px; }
+      #projects ul li a {
+        color: #D4D4D4; }
+      #projects ul li.bull {
+        margin: 0 3px;
+        font-size: 24px;
+        vertical-align: middle; }
+        #projects ul li.bull a {
+          color: #333; }
+          #projects ul li.bull a.curr {
+            color: #D4D4D4; }
