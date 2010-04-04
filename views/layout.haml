@@ -13,20 +13,22 @@
 		= javascript_include_tag 'site.js'
 		= yield_content :head
 
-	%body
+	%body{:name=>'top'}
 		#nav
 			%ul
-				%li=link_to "Projects", "#"
+				%li=link_to "About", "#about"
 				%li +
-				%li=link_to "About", "#"
+				%li=link_to "Projects", "#projects"
 				%li +
-				%li=link_to "Contact", "#"
+				%li=link_to "Contact", "#contact"
+				%li +
+				%li=link_to "Top", "#top"
 
 		#header
 			%h1 Todd Zusman,
 			%h2 Web Application Developer
 
-		#about
+		#about{:name=>'about'}
 			.wrapper
 				.pic
 					%img{:src=>'/images/todd.jpg',:alt=>'Todd Zusman, Web Application Developer',:width=>136}
@@ -61,7 +63,7 @@
 							Frameworks
 							%span (jQuery, CakePHP, etc)
 
-		#projects
+		#projects{:name=>'projects'}
 			%h1 Recent Projects
 			%ul
 				%li=link_to "&laquo; Prev"
@@ -77,10 +79,10 @@
 						%h4 Texts From Last Night
 						%p I built the platform which is supportng TFLN's exploading popularity. Scalability was crucial, as the system serves 5+ million web and mobile requests per day. I wore many hats building the platform, from server admin to front-end developer. Designed and built the API which TFLN's iPhone, iPad, and Android apps use.
 						.see
-							=link_to "Visit Site &rarr;", "#"
+							=link_to "Visit Site &rarr;", "http://textsfromlastnight.com/"
 
 		#contact
-			%h1 Contact Me
+			%h1{:name=>'contact'} Contact Me
 			.wrapper
 				.work
 					%h4 Let's work together

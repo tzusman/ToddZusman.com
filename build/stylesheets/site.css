@@ -220,7 +220,8 @@ a {
     color: white; }
 
 body {
-  background: #111; }
+  background: #111;
+  padding-top: 30px; }
 
 h1 {
   text-align: center;
@@ -236,6 +237,9 @@ h1 {
   padding-left: 150px; }
 
 #nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
   background: #1b1b1b;
   opacity: 0.95;
   -moz-opacity: 0.95;

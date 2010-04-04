@@ -13,21 +13,23 @@
     <script src="/javascripts/site.js" type="text/javascript"></script>
     <title>Todd Zusman &middot; Web Application Developer</title>
   </head>
-  <body>
+  <body name='top'>
     <div id='nav'>
       <ul>
-        <li><a href="#">Projects</a></li>
+        <li><a href="#about">About</a></li>
         <li>+</li>
-        <li><a href="#">About</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li>+</li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>+</li>
+        <li><a href="#top">Top</a></li>
       </ul>
     </div>
     <div id='header'>
       <h1>Todd Zusman,</h1>
       <h2>Web Application Developer</h2>
     </div>
-    <div id='about'>
+    <div id='about' name='about'>
       <div class='wrapper'>
         <div class='pic'>
           <img alt='Todd Zusman, Web Application Developer' src='/images/todd.jpg' width='136' />
@@ -74,7 +76,7 @@
         </div>
       </div>
     </div>
-    <div id='projects'>
+    <div id='projects' name='projects'>
       <h1>Recent Projects</h1>
       <ul>
         <li><a href="#">&laquo; Prev</a></li>
@@ -92,14 +94,14 @@
             <h4>Texts From Last Night</h4>
             <p>I built the platform which is supportng TFLN's exploading popularity. Scalability was crucial, as the system serves 5+ million web and mobile requests per day. I wore many hats building the platform, from server admin to front-end developer. Designed and built the API which TFLN's iPhone, iPad, and Android apps use.</p>
             <div class='see'>
-              <a href="#">Visit Site &rarr;</a>
+              <a href="http://textsfromlastnight.com/">Visit Site &rarr;</a>
             </div>
           </div>
         </div>
       </div>
     </div>
     <div id='contact'>
-      <h1>Contact Me</h1>
+      <h1 name='contact'>Contact Me</h1>
       <div class='wrapper'>
         <div class='work'>
           <h4>Let's work together</h4>
