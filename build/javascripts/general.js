@@ -65,7 +65,6 @@ $(document).ready(function(){
 	// Handle form submission
 	$('#contact form').bind( 'submit', function(){
 		$(this).find('.submit input').val( 'Submitting...' ).attr( 'disabled', 'disabled' );
-		return false;
 	} );
 	
 	// Scroll to Info
