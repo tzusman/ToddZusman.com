@@ -2,6 +2,10 @@ $(document).ready(function(){
 
 	$('#projects a.prev').css( 'visibility', 'hidden' );
 
+	if ( window.location.pathname == '/sent' ) 
+		$('#thanks').show();
+	
+
 	// Project Bullets
 	$('#projects li.bull a').click( function(){
 		var ind = $(this).closest('ul').find('> .bull').index( $(this).parent() );
