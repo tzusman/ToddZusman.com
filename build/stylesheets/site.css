@@ -273,6 +273,16 @@ h1 {
     color: #575757;
     margin-top: -15px; }
 
+#thanks {
+  background-color: #232323;
+  border: 2px solid #171717;
+  color: #FFF;
+  font-size: 24px;
+  margin: 40px auto 0;
+  padding: 20px;
+  text-align: center;
+  width: 600px; }
+
 #about {
   background: #171717;
   overflow: auto;
@@ -296,7 +306,9 @@ h1 {
       margin-bottom: 15px; }
     #about #main p {
       color: #999;
-      text-align: justify; }
+      text-align: left;
+      font-size: 15px;
+      line-height: 21px; }
   #about #skills {
     border-left: 5px solid #111;
     width: 220px;
@@ -319,7 +331,7 @@ h1 {
 
 #projects {
   text-align: center;
-  margin: 30px 0 0 0; }
+  margin: 40px 0 0 0; }
   #projects ul {
     list-style-type: none;
     margin: 0px;
@@ -376,11 +388,14 @@ h1 {
 
 #contact {
   padding-bottom: 100px;
+  margin-top: 20px;
   overflow: auto;
   overflow: -moz-scrollbars-none;
   display: inline-block; }
   #contact {
     display: block; }
+  #contact h1 {
+    margin-top: 20px; }
   #contact .wrapper {
     margin-top: 30px; }
     #contact .wrapper .work {
@@ -397,7 +412,9 @@ h1 {
         margin-bottom: 10px; }
       #contact .wrapper .work p {
         color: #999;
-        text-align: justify; }
+        text-align: left;
+        font-size: 15px;
+        line-height: 21px; }
     #contact .wrapper form {
       display: inline;
       float: left;
@@ -413,7 +430,8 @@ h1 {
           color: #FFF;
           font-size: 12px; }
         #contact .wrapper form p input {
-          padding: 13px 10px 10px 90px; }
+          padding: 13px 10px 10px 90px;
+          width: 200px; }
         #contact .wrapper form p textarea {
           padding: 60px 20px 10px 10px; }
         #contact .wrapper form p span {

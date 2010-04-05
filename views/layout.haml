@@ -10,7 +10,7 @@
 		= javascript_include_tag 'jquery.tools.min.js'
 		= javascript_include_tag 'jquery.localscroll-1.2.7-min.js'
 		= javascript_include_tag 'fb/jquery.fancybox-1.3.1.pack.js'
-		= javascript_include_tag 'site.js'
+		= javascript_include_tag 'general.js'
 		= yield_content :head
 
 	%body{:name=>'top'}
@@ -24,6 +24,9 @@
 				%li +
 				%li=link_to "Top", "#top"
 
+		/#thanks
+		/	Thanks for your message, I will get back to you soon.			
+
 		#header
 			%h1 Todd Zusman,
 			%h2 Web Application Developer
@@ -36,9 +39,10 @@
 					%h3
 						Have a Project? Let's Talk.
 					%p
-						I'm a recent graduate of the University of Michigan's College of Engineering. I have been developing web applications for over 8 years. Through my various experiences in web technologies, I have learned to build web applications from the ground up. I have a solid understanding of everything it takes to build a great app, from server administration to user experience. I'm currently based in Boulder, CO where I enjoy snowboarding and hiking.
-					%p
 						People come up with a great idea and ask themselves, &quot;How do I make this happen?&quot; The answer? Contact me. I take ideas and turn them into useful and engaging web applications. I come fully-packed with all the skills &amp; experience needed to get the job done. No one wants to be stuck thinking &quot;that was my idea&hellip;&quot;
+					%p
+						I'm a recent graduate of the University of Michigan's College of Engineering. I have been developing web applications for over 8 years. Through my various experiences in web technologies, I have learned to build web applications from the ground up. I have a solid understanding of everything it takes to build a great app, from server administration to user experience. I'm currently based in Ann Arbor, MI.
+						/ where I enjoy snowboarding and hiking.
 				#skills
 					%h4 Technologies
 					%ul
@@ -61,32 +65,38 @@
 							%span (Custom &amp; 3<sup>rd</sup> Party)
 						%li
 							Frameworks
-							%span (jQuery, CakePHP, etc)
+							%span (jQuery, CakePHP)
 
-		#projects{:name=>'projects'}
-			%h1 Recent Projects
+		#projects
+			%h1{:name=>'projects'} Recent Projects
 			%ul
-				%li=link_to "&laquo; Prev"
+				%li=link_to "&laquo; Prev", "#", :class=>'prev'
 				%li.bull=link_to "&bull;", "#", :class=>'curr'
 				%li.bull=link_to "&bull;", "#" 
-				%li.bull=link_to "&bull;", "#"
-				%li=link_to " Next &raquo;"
+				%li=link_to " Next &raquo;", "#", :class=>'next'
 			.previews
 				.wrapper
 					.preview
-						%img{:src=>'/images/tfln-preview.png',:alt=>'TextsFromLastNight.com'}
+						%img{:src=>'/images/tfln-preview.png',:alt=>'TextsFromLastNight.com',:width=>560,:height=>420}
 					.about
 						%h4 Texts From Last Night
 						%p I built the platform which is supportng TFLN's exploading popularity. Scalability was crucial, as the system serves 5+ million web and mobile requests per day. I wore many hats building the platform, from server admin to front-end developer. Designed and built the API which TFLN's iPhone, iPad, and Android apps use.
 						.see
 							=link_to "Visit Site &rarr;", "http://textsfromlastnight.com/"
+				.wrapper{:style=>'display:none;'}
+					.preview
+						%img{:src=>'/images/symplex-preview.png',:alt=>'Symplex Admin Panel',:width=>560,:height=>420}
+					.about
+						%h4 Symplex Admin Panel
+						%p Typically web applications require an administrative panel to manipulate the public facing website.  To ensure complete functionality of the admin panel without a large time investment, I created Symplex, which has incredible functionality out of the box.  I am then able to skip spending many hours developing common functionality, such as user management and activity logging, and begin working on the code specific to the current project.
+						.see
 
 		#contact
 			%h1{:name=>'contact'} Contact Me
 			.wrapper
 				.work
 					%h4 Let's work together
-					%p Because of the nature of the projects I work on, I am very selective about my clients. Developing a web application is an intense and lengthy process. To achieve a fantastic result, the client must be willing to do their homework in order to clearly express their vision. Even the simplest projects require hours of wireframing and strategy to determine how the application will work. This entire process is highly collaborative, because no one knows better what you are looking for in a product than you. If you are interested in learning more about my process, contact me, I'd be happy to explain further.
+					%p Because of the nature of the projects I work on, I am very selective about my clients. Developing a web application is an intense and lengthy process. To achieve a fantastic result, the client must be willing to do their homework in order to clearly express their vision. Even seemingly simple projects may require hours of wireframing and strategy to determine how the application will work. This entire process is highly collaborative, because no one knows better what you are looking for in a product than you. If you are interested in learning more about my process, contact me, I'd be happy to explain further.
 				%form{:action=>'send.php',:method=>'post'}
 					%p
 						%input{:type=>'text',:name=>'name',:autocomplete=>'off'}

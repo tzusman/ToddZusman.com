@@ -1,6 +1,35 @@
 $(document).ready(function(){
 
-	$('#projects').data( 'index', 0 );
+	$('#projects li.bull a').click( function(){
+		var ind = $(this).closest('ul').find('> .bull').index( $(this).parent() );
+		if ( $('#projects').data('index') == ind )
+			return false;
+		$('#projects').data( 'index', ind );
+		$('#projects .wrapper:visible').fadeOut( 'fast', function(){
+			$( $('#projects .wrapper')[ind] ).fadeIn( 'fast', function(){
+
+				var ind = $('#projects').data('index');
+				$('#projects li.bull a').removeClass( 'curr' );
+				$( $('#projects li.bull')[ind] ).find('a').addClass( 'curr' );
+
+				console.log( 'Index: ' + ind );
+
+				vis = ind == 0;
+				console.log( ' - Prev Vis: ' + vis );
+				$('#projects a.prev').css( 'visibility', vis?'none':'' );
+				
+				vis = ind == $('#projects li.bull a').length;
+			
+				console.log( ' - Next Vis: ' + vis );
+				$('#projects a.next').css( 'visibility', vis?'none':'' );
+					
+
+			} );
+		} );
+		return false;
+	} );
+
+	/*$('#projects').data( 'index', 0 );
 	$('div.switcher a.prev').css( 'visibility', 'hidden' );
 	$( $('ul.switcher a')[0] ).addClass( 'curr' );
 
@@ -38,6 +67,8 @@ $(document).ready(function(){
 		switch_it( ind+delta );
 		return false;
 	} );
+	*/
+
 
 	/*
 	$(document).keypress( function(e){
