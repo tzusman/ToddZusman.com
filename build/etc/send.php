@@ -12,7 +12,7 @@
 
 		mail( $to, $subject, $msg );	
 	
-		header( 'Location: /sent#contact' );
+		header( 'Location: /sent' );
 
 	} catch ( Exception $e ) {
 		// Nothing yet		
