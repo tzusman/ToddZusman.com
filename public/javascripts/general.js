@@ -4,7 +4,7 @@ $(document).ready(function(){
 	$('input').attr( 'autocomplete', 'off' );
 
 	if ( window.location.pathname == '/sent' ) 
-		$('#thanks').show().delay(1000).fadeOut();
+		$('#thanks').show().delay(10000).fadeOut();
 
 	// Project Bullets
 	$('#projects li.bull a').click( function(){
