@@ -13,7 +13,8 @@
 		= javascript_include_tag 'general.js'
 		= yield_content :head
 
-	%body{:name=>'top'}
+	%body
+		%a{:name=>'top'}
 		#nav
 			%ul
 				%li=link_to "About", "#about"
@@ -31,7 +32,8 @@
 			%h1 Todd Zusman,
 			%h2 Web Application Developer
 
-		#about{:name=>'about'}
+		%a{:name=>'about'}
+		#about
 			.wrapper
 				.pic
 					%img{:src=>'/images/todd.jpg',:alt=>'Todd Zusman, Web Application Developer',:width=>136}
@@ -68,7 +70,8 @@
 							%span (jQuery, CakePHP)
 
 		#projects
-			%h1{:name=>'projects'} Recent Projects
+			%a{:name=>'projects'}	
+			%h1 Recent Projects
 			%ul
 				%li=link_to "&laquo; Prev", "#", :class=>'prev'
 				%li.bull=link_to "&bull;", "#", :class=>'curr'
@@ -92,7 +95,8 @@
 						.see
 
 		#contact
-			%h1{:name=>'contact'} Contact Me
+			%a{:name=>'contact'}
+			%h1 Contact Me
 			.wrapper
 				.work
 					%h4 Let's work together
