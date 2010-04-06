@@ -1,10 +1,10 @@
 $(document).ready(function(){
 
 	$('#projects a.prev').css( 'visibility', 'hidden' );
+	$('input').attr( 'autocomplete', 'off' );
 
 	if ( window.location.pathname == '/sent' ) 
 		$('#thanks').show();
-	
 
 	// Project Bullets
 	$('#projects li.bull a').click( function(){
