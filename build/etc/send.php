@@ -13,7 +13,7 @@
 		$hdrs  = "From: ToddZusman.com\r\n";
     $hdrs .= sprintf( "Reply-To: %s\r\n", $_POST['email'] );
 
-		mail( $to, $subject, $msg );	
+		mail( $to, $subject, $msg, $hdrs );
 	
 		header( 'Location: /sent' );
 
