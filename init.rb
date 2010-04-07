@@ -18,13 +18,13 @@ end
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
-  enable :minify_css
+  #enable :minify_css
   
   # Minify Javascript on build
-  enable :minify_javascript
+  #enable :minify_javascript
   
   # Shrink/smush PNG/JPEGs on build
-  enable :smush_pngs
+  #enable :smush_pngs
   
   # Enable cache buster
   # enable :cache_buster

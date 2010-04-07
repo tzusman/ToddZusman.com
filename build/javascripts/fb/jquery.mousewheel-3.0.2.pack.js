@@ -1,4 +1,4 @@
-/* Copyright (c) 2009 Brandon Aaron (http://brandonaaron.net)
+/*! Copyright (c) 2009 Brandon Aaron (http://brandonaaron.net)
  * Dual licensed under the MIT (http://www.opensource.org/licenses/mit-license.php)
  * and GPL (http://www.opensource.org/licenses/gpl-license.php) licenses.
  * Thanks to: http://adomas.org/javascript-mouse-wheel/ for some pointers.
@@ -8,4 +8,6 @@
  * 
  * Requires: 1.2.2+
  */
-(function(a){function e(b){var c=[].slice.call(arguments,1),d=0;b=a.event.fix(b||window.event);b.type="mousewheel";if(b.wheelDelta){d=b.wheelDelta/120}if(b.detail){d=-b.detail/3}c.unshift(b,d);return a.event.handle.apply(this,c)}var f=["DOMMouseScroll","mousewheel"];a.event.special.mousewheel={setup:function(){if(this.addEventListener){for(var b=f.length;b;){this.addEventListener(f[--b],e,false)}}else{this.onmousewheel=e}},teardown:function(){if(this.removeEventListener){for(var b=f.length;b;){this.removeEventListener(f[--b],e,false)}}else{this.onmousewheel=null}}};a.fn.extend({mousewheel:function(b){return b?this.bind("mousewheel",b):this.trigger("mousewheel")},unmousewheel:function(b){return this.unbind("mousewheel",b)}})})(jQuery);
+
+(function(b){function d(a){var f=[].slice.call(arguments,1),e=0;a=b.event.fix(a||window.event);a.type="mousewheel";if(a.wheelDelta)e=a.wheelDelta/120;if(a.detail)e=-a.detail/3;f.unshift(a,e);return b.event.handle.apply(this,f)}var c=["DOMMouseScroll","mousewheel"];b.event.special.mousewheel={setup:function(){if(this.addEventListener)for(var a=c.length;a;)this.addEventListener(c[--a],d,false);else this.onmousewheel=d},teardown:function(){if(this.removeEventListener)for(var a=c.length;a;)this.removeEventListener(c[--a],
+d,false);else this.onmousewheel=null}};b.fn.extend({mousewheel:function(a){return a?this.bind("mousewheel",a):this.trigger("mousewheel")},unmousewheel:function(a){return this.unbind("mousewheel",a)}})})(jQuery);
