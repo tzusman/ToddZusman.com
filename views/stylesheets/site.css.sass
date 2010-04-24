@@ -65,6 +65,7 @@ h1
 	padding: 10px
 	font-size: 14px
 	text-transform: uppercase
+	z-index: 100
 	ul
 		+inline-list
 		li
@@ -204,6 +205,13 @@ h1
 			background: #1C1C1C
 			p
 				position: relative
+				&.error
+					input, textarea
+						color: #333
+						border: 2px solid #800000
+						background: #EEE
+					span
+						color: #333
 				input, textarea
 					border: none
 					background: #2C2C2C
@@ -231,3 +239,10 @@ h1
 					background: #2C2C2C
 					color: #FFF
 					border: none
+			#error
+				background: none repeat scroll 0 0 #EEEEEE
+				border: 2px solid #800000
+				font-weight: bold
+				margin-bottom: 15px
+				margin-top: -5px
+				padding: 3px 8px

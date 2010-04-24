@@ -64,7 +64,27 @@ $(document).ready(function(){
 
 	// Handle form submission
 	$('#contact form').bind( 'submit', function(){
-		$(this).find('.submit input').val( 'Submitting...' ).attr( 'disabled', 'disabled' );
+
+		var problem = false;
+
+		var err = $('#name').val().length < 3;
+		problem = problem || err;
+		$('#name-wrapper').toggleClass( 'error', err );
+
+		var err = $('#email').val().length < 3;
+		problem = problem || err;
+		$('#email-wrapper').toggleClass( 'error', err );
+
+		var err = $('#aboot').val().length < 10;
+		problem = problem || err;
+		$('#about-wrapper').toggleClass( 'error', err );
+
+		$('#error').toggle( problem );
+
+		if ( ! problem )
+			$(this).find('.submit input').val( 'Submitting...' ).attr( 'disabled', 'disabled' );
+		return ! problem;
+
 	} );
 	
 	// Scroll to Info
